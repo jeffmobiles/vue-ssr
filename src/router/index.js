@@ -13,8 +13,7 @@ export function createRouter () {
     routes: [
       {
         path: '/',
-        name: 'home',
-        component: home
+        redirect: '/home'
       },
       {
         path: '/home',
