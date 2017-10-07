@@ -24,6 +24,7 @@ const server = express()
 const serverBundle = require('./dist/vue-ssr-server-bundle.json')
 const renderer = createBundleRenderer(serverBundle, {
   ruunInNewContext: false, //tuijian
+  template: require('fs').readFileSync('./index.server.html', 'utf-8')
   //template, // kexuan
   //clientManifest //
 })
@@ -31,6 +32,7 @@ const renderer = createBundleRenderer(serverBundle, {
 server.get('*', (req, res) => {
   const context = { url: req.url}
   renderer.renderToString(context, (err, html) => {
+    console.log(req.url);
     res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});//设置response编码为utf-8
     res.end(html);
   })

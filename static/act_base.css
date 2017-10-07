@@ -1,0 +1,59 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}html,body {
+    width:100%;
+    height:100%;
+    margin:0; padding:0;
+}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form,ul,li{margin:0;padding:0px;}
+body{
+    margin:0;
+    font-size:12px;
+    font-family:Helvetica;  /**/
+}
+
+body{
+    background:#fff;
+    -webkit-backface-visibility:hidden;
+    /*-webkit-perspective:1000;*/
+    -webkit-overflow-scrolling: touch; /* 当手指从触摸屏上移开，会保持一段时间的滚动 */
+    /*-webkit-overflow-scrolling: auto; !* 当手指从触摸屏上移开，滚动会立即停止 *!*/
+    -webkit-appearance:none ; /* 去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 400
+}
+input,select{font-size:12px;line-height:16px;}
+img{border:0;width:100%}
+ul,li{list-style-type:none;}
+/*li{font-size:13px;}*/
+.tc{text-align:center;}.tl{text-align:left;}.tr{text-align:right;}
+a{
+  color:#222;
+  text-decoration:none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hide{display:none}
+.show{display:block}
+.clearFix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearFix {
+  zoom: 1;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
